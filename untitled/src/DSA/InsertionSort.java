@@ -18,7 +18,7 @@ public class InsertionSort {
         }
     }
 
-    private static void Swap(int[] arr, int first, int last) {
+    public static void Swap(int[] arr, int first, int last) {
         int temp = arr[first];
         arr[first] = arr[last];
         arr[last] = temp;
