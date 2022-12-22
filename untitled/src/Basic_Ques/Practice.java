@@ -1,53 +1,27 @@
 package Basic_Ques;
 
+import java.util.Arrays;
+
 public class Practice {
     public static void main(String[] args) {
-            int[] arr = {1};
-            int target = 0;
-        System.out.println(Search(arr, target));
-        }
+        int[] arr = {5, 1, 2, 3, 4};
+        BubbleSort(arr);
+        System.out.println(Arrays.toString(arr));
+    }
 
-        static int Search(int[] arr, int target) {
-            int pivot = Pivot(arr);
-
-            if (pivot == -1)
-                return BinarySearch(arr, target, 0, arr.length - 1);
-            if (arr[pivot] == target)
-                return pivot;
-            if (arr[0] <= target)
-                return BinarySearch(arr, target, 0, pivot - 1);
-
-            return BinarySearch(arr, target, pivot + 1, arr.length - 1);
-        }
-
-        public static int BinarySearch(int[] arr, int target, int start, int end) {
-            while (start <= end) {
-                int mid = start + (end - start) / 2;
-                if (arr[mid] > target)
-                    end = mid - 1;
-                else if (arr[mid] < target)
-                    start = mid + 1;
-                else
-                    return mid;
+    static void BubbleSort(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 1; j < arr.length - i; j++) {
+                if (arr[j - 1] > arr[j]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = temp;
+                } else {
+                    break;
+                }
             }
-            return -1;
         }
-
-        public static int Pivot(int[] arr) {
-            int start = 0; int end = arr.length - 1;
-            while (start < end) {
-                int mid = start + (end - start) / 2;
-                if (arr[mid] > arr[mid + 1])
-                    return mid;
-                if (arr[mid] < arr[mid - 1])
-                    return mid - 1;
-                if (arr[start] > arr[mid])
-                    end = mid - 1;
-                else
-                    start = mid + 1;
-            }
-            return -1;
-        }
+    }
 }
 
 
