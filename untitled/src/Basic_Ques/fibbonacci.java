@@ -1,10 +1,9 @@
 package Basic_Ques;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-public class fib {
+public class fibbonacci {
     public static void main(String[] args) {
         int[][] matrix = {{1, 2, 3},
                 {4, 5, 6},
