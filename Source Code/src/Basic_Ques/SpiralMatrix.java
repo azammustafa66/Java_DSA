@@ -3,7 +3,7 @@ package Basic_Ques;
 import java.util.ArrayList;
 import java.util.List;
 
-public class fibbonacci {
+public class SpiralMatrix {
     public static void main(String[] args) {
         int[][] matrix = {{1, 2, 3},
                 {4, 5, 6},
@@ -19,7 +19,7 @@ public class fibbonacci {
         int bottom =matrix.length-1;
         int left = 0;
         int right = matrix[0].length-1;
-        //loop while still in the matrix boundries
+        //loop while still in the matrix boundaries
         while(top <= bottom && left <= right){
 
             //move right
@@ -51,7 +51,7 @@ public class fibbonacci {
                     cells.add(matrix[i][left]);
                 }
             }
-            //set left coulmn pointer to next column to the right
+            //set left column pointer to next column to the right
             left++;
         }
 
