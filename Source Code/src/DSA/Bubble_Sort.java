@@ -4,9 +4,10 @@ import java.util.Arrays;
 
 public class Bubble_Sort {
     public static void main(String[] args) {
-        int[] arr = {1, 5, 7, 3, 2, 4, 6};
-        boolean swap = false;
+        int[] arr = {1, 2, 3, 5, 4};
+        boolean swap;
         for (int i = 0; i < arr.length; i++) {
+            swap = false;
             for (int j = 1; j < arr.length - i; j++) {
                 if (arr[j - 1] > arr[j]) {
                     int temp = arr[j];

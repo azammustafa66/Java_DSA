@@ -21,6 +21,6 @@ public class LinearSearch2D {
                 }
             }
         }
-        return new int[]{-1, -1};
+        return new int[] {-1, -1};
     }
 }
