@@ -1,34 +1,29 @@
 package DSA;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 public class CyclicSort {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 2, 4};
-        System.out.println(Cycle(arr));
+        int[] arr = {1, 5, 6, 4, 2, 3};
+        Cycle(arr);
+        System.out.println(Arrays.toString(arr));
     }
 
-    static List<Integer> Cycle(int[] arr) {
+    static void Cycle(int[] arr) {
         int i = 0;
-        ArrayList<Integer> ans = null;
         while (i < arr.length) {
             int correct = arr[i] - 1;
             if (arr[i] != arr[correct]) {
-                int temp = arr[i];
-                arr[i] = arr[correct];
-                arr[correct] = temp;
+                swap(arr, i, correct);
             } else {
                 i++;
             }
-            ans = new ArrayList<>();
-            for (int index = 0; index < arr.length; index++) {
-                if (arr[index] != index + 1) {
-                    ans.add(arr[index]);
-                    ans.add(arr[index] + 1);
-                }
-            }
         }
-        return ans;
+    }
+
+    static void swap(int[] arr, int first, int last) {
+        int temp = arr[first];
+        arr[first] = arr[last];
+        arr[last] = temp;
     }
 }
