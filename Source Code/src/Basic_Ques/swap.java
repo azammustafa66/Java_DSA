@@ -4,18 +4,17 @@ import java.util.Arrays;
 
 public class swap {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5};
-        System.out.println("Before swapping "+Arrays.toString(arr));
-        change(arr,0,4);
-        System.out.println("After swapping"+Arrays.toString(arr));
+        int a = 10;
+        int b = 20;
+        Swap(a, b);
+        System.out.print(a + " " + b);
     }
 
-    static int[] change(int[] arr, int index1, int index2) {
-        int temp = arr [index2];
-            arr[index2] = arr[index1];
-            arr[index1] = temp;
-        return arr;
+    static void Swap(int a, int b) {
+        int temp = a;
+        a = b;
+        b = temp;
+        System.out.println(a + " " + b);
     }
-
 }
 

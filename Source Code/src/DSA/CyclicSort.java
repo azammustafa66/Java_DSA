@@ -21,7 +21,7 @@ public class CyclicSort {
         }
     }
 
-    static void swap(int[] arr, int first, int last) {
+    static void swap (int[] arr, int first, int last) {
         int temp = arr[first];
         arr[first] = arr[last];
         arr[last] = temp;
