@@ -9,7 +9,8 @@ public class _1toN {
         if (n == 0) {
             return;
         }
+        System.out.print(n+" ");
         print(n - 1);
-        System.out.println(n);
+        System.out.print(n+" ");
     }
 }
