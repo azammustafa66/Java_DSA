@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Basics;
 
 public class Sum1toN {
     public static void main(String[] args) {
