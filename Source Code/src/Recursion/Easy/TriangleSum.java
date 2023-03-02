@@ -8,17 +8,25 @@ public class TriangleSum {
         printSum(arr);
     }
 
-    private static void printSum(int[] arr) {
-        if (arr.length < 1)
+    static void printSum(int[] arr) {
+        if (arr.length == 1)
             return;
 
         int[] temp = new int[arr.length - 1];
 
-        for (int i = 0; i < arr.length - 1; i++) {
-            int x = arr[i] + arr[i + 1];
-            temp[i] = x;
-        }
+        helper(arr, temp, 0);
+
         printSum(temp);
+
         System.out.println(Arrays.toString(temp));
+    }
+
+    static int[] helper(int[] arr, int[] temp, int index) {
+        if (index == arr.length - 1)
+            return temp;
+
+        temp[index] = arr[index] + arr[index + 1];
+
+        return helper(arr, temp, ++index);
     }
 }
