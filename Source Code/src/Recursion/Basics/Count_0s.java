@@ -11,7 +11,7 @@ public class Count_0s {
         int digit = n % 10;
 
         if (digit == 0) {
-            return count0(n / 10, count + 1);
+            return count0(n / 10, ++count);
         }
 
         return count0(n / 10, count);
